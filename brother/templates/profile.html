@@ -1,0 +1,19 @@
+
+{%  extends "templates/global_navbar.html" %}
+
+{% block title %}
+<title>Brother {{first_name}}</title>
+{% endblock %}
+
+
+{% block content %}
+{% load gravatar %}
+{% gravatar email 150 %}
+<p>Want to change the image you see? <a href="https://en.gravatar.com/">Click Here!</a> 
+
+<ul>
+	<li>Name: {{first_name}} {{last_name}}
+	<li>Username: {{username}}</li>
+	<li>Email: {{email}}</li>
+</ul>
+{% endblock %}

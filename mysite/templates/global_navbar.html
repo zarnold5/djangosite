@@ -1,0 +1,34 @@
+{% load staticfiles %}
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>CSS Newbie Example: Super Simple Horizontal Navigation Bar</title>
+<style type="text/css">
+</style>
+<link rel="stylesheet" href={% static "/static/css/nav_bar_styles.css" %}>
+</head>
+
+<body>
+<div id="wrap">
+   <h1>PSI U</h1>
+   
+   <!-- Here's all it takes to make this navigation bar. -->
+   <ul id="nav">
+      <li><a href="#">Discussions</a></li>
+      <li><a href="/polls/">Polls</a></li>
+      <li><a href="#">Brothers</a></li>
+      <li class="ni_right"><a href="/logout/">Logout</a></li>
+
+   </ul>
+   <!-- That's it! -->
+   <div id="content">
+
+   {% block content %}
+   {% endblock %}
+
+   </div>
+
+</div>
+
+</body>
+</html>
